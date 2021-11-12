@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { addingIngredient } from '../shopping-list.component'
 
 @Component({
   selector: 'app-shopping-edit',
@@ -6,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping-edit.component.scss']
 })
 export class ShoppingEditComponent implements OnInit {
+
+  addIngredient(name: string, amount: number){
+    event.preventDefault();
+    console.log(name);
+    console.log(amount);
+
+    addingIngredient(name, amount);
+  }
 
   constructor() { }
 

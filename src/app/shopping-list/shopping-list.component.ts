@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
@@ -12,9 +12,13 @@ export class ShoppingListComponent implements OnInit {
     new Ingredient('B', 2),
   ];
 
+  
   constructor() { }
-
+  
   ngOnInit(): void {
   }
-
+  
+  public addingIngredient(name: string, amount: number){
+    new Ingredient[name, amount];
+  }
 }
