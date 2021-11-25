@@ -13,7 +13,6 @@ export class DataStorageService{
 
     storeRecipes(){
         const recipes = this.recipeService.getRecipes();
-
         this.http.put(this.url, recipes).subscribe(response =>{
             console.log(response);
         });

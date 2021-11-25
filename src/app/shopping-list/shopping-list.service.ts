@@ -24,8 +24,6 @@ export class ShoppingListService {
     }
 
     addIngredients(ingredients: Ingredient[]){
-        // Use a standard for-loop
-
         this.ingredients.push(...ingredients);
         this.ingredientsUpdated.next(this.ingredients.slice());
     }
